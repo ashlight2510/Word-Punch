@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>워드 펀치 - 영어 단어 게임</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🥊 워드 펀치</h1>
+            <p class="subtitle">영어 단어를 빠르게 맞춰보세요!</p>
+        </header>
+
+        <!-- 난이도 선택 화면 -->
+        <div id="difficulty-screen" class="screen active">
+            <h2>난이도를 선택하세요</h2>
+            <div class="difficulty-buttons">
+                <button class="difficulty-btn" data-level="easy">초딩</button>
+                <button class="difficulty-btn" data-level="medium">중딩</button>
+                <button class="difficulty-btn" data-level="hard">고딩</button>
+            </div>
+        </div>
+
+        <!-- 게임 화면 -->
+        <div id="game-screen" class="screen">
+            <div class="game-info">
+                <div class="score-board">
+                    <span>점수: <span id="score">0</span></span>
+                    <span>맞춤: <span id="correct">0</span></span>
+                    <span>틀림: <span id="wrong">0</span></span>
+                </div>
+                <div class="level-display">
+                    난이도: <span id="current-level"></span>
+                </div>
+            </div>
+
+            <div class="word-display">
+                <div id="hint" class="hint"></div>
+            </div>
+
+            <div class="input-area">
+                <input type="text" id="word-input" placeholder="힌트를 보고 영어 단어를 입력하세요..." autocomplete="off" autofocus>
+                <button id="submit-btn">확인</button>
+            </div>
+
+            <div class="game-controls">
+                <button id="restart-btn">다시 시작</button>
+                <button id="change-difficulty-btn">난이도 변경</button>
+            </div>
+
+            <div id="feedback" class="feedback"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
